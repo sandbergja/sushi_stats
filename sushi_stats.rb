@@ -28,6 +28,15 @@ JOURNAL_REPORTS = {
             "requestor_id=#{ENV['NEWSBANK_REQUESTOR_ID']}&customer_id=#{ENV['NEWSBANK_CUSTOMER_ID']}"
 }.freeze
 
+MULTIMEDIA_REPORTS = {
+  alexander_street: 'https://pqbi.prod.proquest.com/release/sushi/asp/sushi/reports/ir_m1?'\
+                    "requestor_id=#{ENV['ALEXANDER_STREET_REQUESTOR_ID']}&"\
+                    "customer_id=#{ENV['ALEXANDER_STREET_CUSTOMER_ID']}",
+  artstor: 'https://www.jstor.org/sushi/reports/ir_m1?'\
+           "requestor_id=#{ENV['JSTOR_REQUESTOR_ID']}&customer_id=#{ENV['JSTOR_CUSTOMER_ID']}"
+
+}.freeze
+
 # A class for pulling some stats via SUSHI
 class SushiStats < Thor
   desc 'books BEGIN_DATE END_DATE', 'Book stats between the two dates'
@@ -41,6 +50,14 @@ class SushiStats < Thor
   desc 'journals BEGIN_DATE END_DATE', 'Journal stats between the two dates'
   def journals(begin_date, end_date)
     JOURNAL_REPORTS.each do |source, url_base|
+      fetch_and_process_report source: source, url_base: url_base,
+                               begin_date: begin_date, end_date: end_date
+    end
+  end
+
+  desc 'multimedia BEGIN_DATE END_DATE', 'Journal stats between the two dates'
+  def multimedia(begin_date, end_date)
+    MULTIMEDIA_REPORTS.each do |source, url_base|
       fetch_and_process_report source: source, url_base: url_base,
                                begin_date: begin_date, end_date: end_date
     end
