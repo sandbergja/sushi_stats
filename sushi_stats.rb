@@ -19,11 +19,13 @@ BOOK_REPORTS = {
 
 JOURNAL_REPORTS = {
   ebsco: 'https://sushi.ebscohost.com/R5/reports/tr_j1?'\
-  "requestor_id=#{ENV['EBSCO_REQUESTOR_ID']}&customer_id=#{ENV['EBSCO_CUSTOMER_ID']}",
+         "requestor_id=#{ENV['EBSCO_REQUESTOR_ID']}&customer_id=#{ENV['EBSCO_CUSTOMER_ID']}",
   gale: 'https://sushi5.galegroup.com/sushi/reports/tr_j1?'\
-"requestor_id=#{ENV['GALE_REQUESTOR_ID']}&customer_id=#{ENV['GALE_CUSTOMER_ID']}",
+        "requestor_id=#{ENV['GALE_REQUESTOR_ID']}&customer_id=#{ENV['GALE_CUSTOMER_ID']}",
   jstor: 'https://www.jstor.org/sushi/reports/tr_j1?'\
-         "requestor_id=#{ENV['JSTOR_REQUESTOR_ID']}&customer_id=#{ENV['JSTOR_CUSTOMER_ID']}"
+         "requestor_id=#{ENV['JSTOR_REQUESTOR_ID']}&customer_id=#{ENV['JSTOR_CUSTOMER_ID']}",
+  newsbank: 'https://stats.newsbank.com/sushi_r5/servlet/reports/tr_j1?'\
+            "requestor_id=#{ENV['NEWSBANK_REQUESTOR_ID']}&customer_id=#{ENV['NEWSBANK_CUSTOMER_ID']}"
 }.freeze
 
 # A class for pulling some stats via SUSHI
