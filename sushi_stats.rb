@@ -33,8 +33,12 @@ MULTIMEDIA_REPORTS = {
                     "requestor_id=#{ENV['ALEXANDER_STREET_REQUESTOR_ID']}&"\
                     "customer_id=#{ENV['ALEXANDER_STREET_CUSTOMER_ID']}",
   artstor: 'https://www.jstor.org/sushi/reports/ir_m1?'\
-           "requestor_id=#{ENV['JSTOR_REQUESTOR_ID']}&customer_id=#{ENV['JSTOR_CUSTOMER_ID']}"
-
+           "requestor_id=#{ENV['JSTOR_REQUESTOR_ID']}&customer_id=#{ENV['JSTOR_CUSTOMER_ID']}",
+  bloomsbury: 'https://api-fivestar.highwire.org/sushi/reports/ir_m1?'\
+              "requestor_id=#{ENV['BLOOMSBURY_REQUESTOR_ID']}&"\
+              "customer_id=#{ENV['BLOOMSBURY_CUSTOMER_ID']}&"\
+              "api_key=#{ENV['BLOOMSBURY_API_KEY']}&"\
+              "platform=#{ENV['BLOOMSBURY_PLATFORM']}"\
 }.freeze
 
 # A class for pulling some stats via SUSHI
