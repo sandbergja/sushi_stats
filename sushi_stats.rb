@@ -38,7 +38,11 @@ MULTIMEDIA_REPORTS = {
               "requestor_id=#{ENV['BLOOMSBURY_REQUESTOR_ID']}&"\
               "customer_id=#{ENV['BLOOMSBURY_CUSTOMER_ID']}&"\
               "api_key=#{ENV['BLOOMSBURY_API_KEY']}&"\
-              "platform=#{ENV['BLOOMSBURY_PLATFORM']}"\
+              "platform=#{ENV['BLOOMSBURY_PLATFORM']}",
+  fod: 'https://connect.liblynx.com/sushi/r5/reports/ir_m1?'\
+       "requestor_id=#{ENV['FOD_REQUESTOR_ID']}&"\
+       "customer_id=#{ENV['FOD_CUSTOMER_ID']}&"\
+       "api_key=#{ENV['FOD_API_KEY']}"
 }.freeze
 
 # A class for pulling some stats via SUSHI
