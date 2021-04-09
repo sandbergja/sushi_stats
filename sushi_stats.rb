@@ -14,7 +14,9 @@ BOOK_REPORTS = {
   ebsco: 'https://sushi.ebscohost.com/R5/reports/tr_b1?'\
             "requestor_id=#{ENV['EBSCO_REQUESTOR_ID']}&customer_id=#{ENV['EBSCO_CUSTOMER_ID']}",
   gale: 'https://sushi5.galegroup.com/sushi/reports/tr_b1?'\
-        "requestor_id=#{ENV['GALE_REQUESTOR_ID']}&customer_id=#{ENV['GALE_CUSTOMER_ID']}"
+        "requestor_id=#{ENV['GALE_REQUESTOR_ID']}&customer_id=#{ENV['GALE_CUSTOMER_ID']}",
+  oxford: 'https://sushi5.scholarlyiq.com/counter/r5/reports/tr_b1?'\
+          "requestor_id=#{ENV['OXFORD_REQUESTOR_ID']}&customer_id=#{ENV['OXFORD_CUSTOMER_ID']}"
 }.freeze
 
 JOURNAL_REPORTS = {
