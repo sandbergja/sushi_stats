@@ -41,6 +41,9 @@ MULTIMEDIA_REPORTS = {
               "customer_id=#{ENV['BLOOMSBURY_CUSTOMER_ID']}&"\
               "api_key=#{ENV['BLOOMSBURY_API_KEY']}&"\
               "platform=#{ENV['BLOOMSBURY_PLATFORM']}",
+  docuseek: 'https://docuseek2.com/reports/counter5/reports/ir_m1?'\
+            "api_key=#{ENV['DOCUSEEK_API_KEY']}&"\
+            "customer_id=#{ENV['DOCUSEEK_CUSTOMER_ID']}",
   fod: 'https://connect.liblynx.com/sushi/r5/reports/ir_m1?'\
        "requestor_id=#{ENV['FOD_REQUESTOR_ID']}&"\
        "customer_id=#{ENV['FOD_CUSTOMER_ID']}&"\
